@@ -1,38 +1,29 @@
 public class BinaryTree {
-    private int value;
+    //guardar a raiz da árvore
+   Node root;
 
-    private BinaryTree leftChild;
-    private BinaryTree rightChild;
+   public Node getRoot(){
+     return root;
+   }
 
-    public BinaryTree(int value) {
-        this.value = value;
-        this.leftChild = null;
-        this.rightChild = null;
-    }
+   public void setRoot(Node root) {
+    this.root = root;
+   }
 
-    public int getValue() {
-        return value;
-    }
+   public BinaryTree(){
+    root = new Node();
+   }
+   
+   public BinaryTree(int info){
+    root = new Node(info);
+   }
+   //método insert
+   public void insert(Node root, int info){
+    
+   }
 
-    public void setValue(int value) {
-        this.value = value;
-    }
 
-    public BinaryTree getLeftChild() {
-        return leftChild;
-    }
 
-    public void setLeftChild(BinaryTree leftChild) {
-        this.leftChild = leftChild;
-    }
-
-    public BinaryTree getRightChild() {
-        return rightChild;
-    }
-
-    public void setRightChild(BinaryTree rightChild) {
-        this.rightChild = rightChild;
-    }
 
     
 }
