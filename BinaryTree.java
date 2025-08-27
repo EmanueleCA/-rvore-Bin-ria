@@ -40,15 +40,35 @@ public class BinaryTree {
     }
    }
 
+    public void preOrder(Node root){
+        if (root == null) {
+            return;
+        }
+    	System.out.println(root.info);
+        preOrder(root.left);
+        preOrder(root.right);
+   }
+
    public void inOrder(Node root){
         if(root == null){
             return;
-        }else{
-            inOrder(root.left());
-            System.out.println(root.info());
-            inOrder(root.right());
         }
+        //percorre a sub-árvore esquerda
+        inOrder(root.left);
+        //imprime a raiz da árvore
+        System.out.println(root.info);
+        //percorre a sub-árvore direita
+        inOrder(root.right);
    }
+
+  public void posOrder(Node root){
+    if (root == null) {
+        return;
+    }
+    posOrder(root.left);
+    posOrder(root.right);
+    System.out.println(root.info);
+  }
 
 
 
